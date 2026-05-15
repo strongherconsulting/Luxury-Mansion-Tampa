@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>901 Palacio De Avila | $17,500,000 | Avila Golf & Country Club | Tampa, FL</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --T:    #0ABAB5;
+  --Tm:   rgba(10,186,181,0.20);
+  --Tl:   rgba(10,186,181,0.07);
+  --B:    #050505;
+  --B2:   #0C0C0C;
+  --W:    #FFFFFF;
+  --W85:  rgba(255,255,255,0.85);
+  --W65:  rgba(255,255,255,0.65);
+  --W35:  rgba(255,255,255,0.35);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--B);
+  color: var(--W);
+  overflow-x: hidden;
+  font-size: 17px;
+  line-height: 1.78;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─────────────────────────────────────
+   STAR ICON  (4-pointed, SVG-only)
+───────────────────────────────────── */
+/* used via <svg><use href="#si"/></svg> */
+
+/* ─────────────────────────────────────
+   NAV
+───────────────────────────────────── */
+nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 60px;
+  background: linear-gradient(to bottom, rgba(5,5,5,.96), transparent);
+  transition: padding .35s ease, background .35s ease;
+}
+nav.pinned {
+  background: rgba(5,5,5,.98);
+  padding: 15px 60px;
+  border-bottom: 1px solid var(--Tm);
+}
+.nav-brand { display:flex; flex-direction:column; gap:3px; }
+.nav-brand-name {
+  font-size: 12px; font-weight:600;
+  letter-spacing:.28em; text-transform:uppercase;
+  color: var(--T);
+}
+.nav-brand-sub {
+  font-size: 10px; font-weight:300;
+  letter-spacing:.22em; text-transform:uppercase;
+  color: var(--W65);
+}
+.nav-links { display:flex; gap:44px; list-style:none; }
+.nav-links a {
+  font-size:10px; font-weight:500;
+  letter-spacing:.22em; text-transform:uppercase;
+  color: var(--W65); text-decoration:none;
+  transition: color .22s;
+}
+.nav-links a:hover { color: var(--T); }
+
+/* ─────────────────────────────────────
+   HERO
+───────────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items:center; justify-content:center;
+  position: relative;
+  background: var(--B);
+  overflow: hidden;
+  padding: 150px 60px 110px;
+}
+/* fine grid */
+.hero-grid {
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(var(--Tm) 1px, transparent 1px),
+    linear-gradient(90deg, var(--Tm) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 88% 80% at 50% 50%, black, transparent 78%);
+  opacity: .5;
+}
+/* radial glow at bottom */
+.hero-glow {
+  position:absolute; inset:0;
+  background: radial-gradient(ellipse 75% 55% at 50% 98%, rgba(10,186,181,.09), transparent 68%);
+}
+/* top stripe */
+.hero::after {
+  content:'';
+  position:absolute; top:0; left:0; right:0;
+  height:3px;
+  background:linear-gradient(90deg, transparent, var(--T) 28%, var(--T) 72%, transparent);
+  z-index:2;
+}
+
+.hero-content {
+  position:relative; z-index:3;
+  text-align:center;
+  max-width: 1020px;
+  width: 100%;
+  animation: ascend 1.5s cubic-bezier(.22,1,.36,1) both;
+}
+@keyframes ascend {
+  from { opacity:0; transform:translateY(48px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+.hero-eyebrow {
+  font-size: 11px; font-weight:500;
+  letter-spacing:.44em; text-transform:uppercase;
+  color: var(--T);
+  margin-bottom: 30px;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(58px, 9vw, 108px);
+  line-height: .95;
+  color: var(--W);
+  margin-bottom: 22px;
+}
+.hero-title em { font-style:italic; color:var(--T); display:block; }
+.hero-rule { width:72px; height:1px; background:var(--T); margin:36px auto; }
+.hero-sub {
+  font-size: 12px; font-weight:300;
+  letter-spacing:.30em; text-transform:uppercase;
+  color: var(--W65);
+  margin-bottom: 60px;
+  line-height: 1.9;
+}
+
+/* stats bar */
+.hero-stats {
+  display: inline-flex;
+  border: 1px solid var(--Tm);
+  background: rgba(5,5,5,.82);
+  backdrop-filter: blur(18px);
+  margin-bottom: 56px;
+}
+.hs {
+  padding: 24px 42px;
+  border-right: 1px solid var(--Tm);
+  text-align:center;
+  transition: background .28s;
+}
+.hs:last-child { border-right:none; }
+.hs:hover { background: var(--Tl); }
+.hs-val {
+  font-family:'Cormorant Garamond',serif;
+  font-size:32px; font-weight:400;
+  color:var(--W); display:block; line-height:1.1;
+}
+.hs-lbl {
+  font-size:9px; font-weight:600;
+  letter-spacing:.28em; text-transform:uppercase;
+  color:var(--T); margin-top:7px; display:block;
+}
+
+.hero-price {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(34px,4.5vw,50px); font-weight:300;
+  color:var(--W); letter-spacing:.05em; margin-bottom:12px;
+}
+.hero-price span { color:var(--T); font-weight:600; }
+.hero-note {
+  font-size:13px; font-weight:300;
+  color:var(--W65); letter-spacing:.06em;
+}
+.hero-note strong { color:var(--T); font-weight:600; }
+
+/* ─────────────────────────────────────
+   LAYOUT UTILITIES
+───────────────────────────────────── */
+.wrap   { max-width:1200px; margin:0 auto; padding:110px 60px; }
+.wrap-sm{ max-width:1200px; margin:0 auto; padding:80px 60px; }
+
+.eyebrow {
+  font-size:10px; font-weight:600;
+  letter-spacing:.40em; text-transform:uppercase;
+  color:var(--T); margin-bottom:18px;
+  display:flex; align-items:center; gap:16px;
+}
+.eyebrow::before { content:''; width:34px; height:1px; background:var(--T); flex-shrink:0; }
+
+.h2 {
+  font-family:'Cormorant Garamond',serif;
+  font-weight:300;
+  font-size:clamp(42px,5.5vw,66px);
+  line-height:1.05; color:var(--W); margin-bottom:40px;
+}
+.h2 em { font-style:italic; color:var(--T); }
+
+.rule  { height:1px; background:linear-gradient(90deg, var(--T), rgba(10,186,181,.07)); }
+.rule-c{ height:1px; background:linear-gradient(90deg, transparent, var(--T) 50%, transparent); }
+
+/* scroll fade */
+.fd { opacity:0; transform:translateY(30px); transition:opacity .9s ease, transform .9s ease; }
+.fd.on { opacity:1; transform:translateY(0); }
+
+/* ─────────────────────────────────────
+   ADDRESS BAR
+───────────────────────────────────── */
+.addr-bar {
+  background:var(--B2);
+  border-top:1px solid var(--Tm);
+  border-bottom:1px solid var(--Tm);
+  padding:24px 60px;
+  display:flex; align-items:center; justify-content:center;
+  gap:40px; flex-wrap:wrap;
+}
+.addr-item {
+  display:flex; align-items:center; gap:12px;
+  font-size:11px; font-weight:500;
+  letter-spacing:.22em; text-transform:uppercase;
+  color:var(--W65);
+}
+.addr-item svg { flex-shrink:0; }
+
+/* ─────────────────────────────────────
+   FULL-WIDTH STATEMENT BAND
+───────────────────────────────────── */
+.statement-band {
+  background:var(--T);
+  padding:72px 60px;
+  text-align:center;
+}
+.statement-inner { max-width:900px; margin:0 auto; }
+.statement-pre {
+  font-size:10px; font-weight:700;
+  letter-spacing:.40em; text-transform:uppercase;
+  color:rgba(0,0,0,.55); margin-bottom:22px;
+  display:flex; align-items:center; justify-content:center; gap:16px;
+}
+.statement-pre::before,
+.statement-pre::after {
+  content:''; display:block;
+  width:32px; height:1px; background:rgba(0,0,0,.3);
+}
+.statement-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(30px,4vw,50px); font-weight:400;
+  color:var(--B); line-height:1.15; margin-bottom:22px;
+}
+.statement-body {
+  font-size:18px; font-weight:400;
+  color:rgba(0,0,0,.70); line-height:1.82;
+}
+
+/* ─────────────────────────────────────
+   TWO-COL LAYOUTS
+───────────────────────────────────── */
+.col2      { display:grid; grid-template-columns:1fr 1fr; gap:90px; align-items:start; }
+.col2-wide { display:grid; grid-template-columns:1.2fr 1fr; gap:90px; align-items:start; }
+
+/* body text */
+.body p {
+  font-size:18px; font-weight:300;
+  line-height:1.88; color:var(--W85);
+  margin-bottom:26px;
+}
+.body p.lead {
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px; font-style:italic; font-weight:300;
+  color:var(--W); line-height:1.55; margin-bottom:30px;
+}
+.body p.italic-close {
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px; font-style:italic; font-weight:300;
+  color:var(--W); line-height:1.6; margin-top:10px;
+}
+
+/* pull quote */
+.pq {
+  padding:46px 42px;
+  border-left:3px solid var(--T);
+  background:var(--Tl);
+  margin-bottom:34px;
+}
+.pq p {
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px; font-style:italic; font-weight:300;
+  line-height:1.6; color:var(--W); margin-bottom:18px;
+}
+.pq cite {
+  font-size:10px; font-weight:600;
+  letter-spacing:.26em; text-transform:uppercase;
+  color:var(--T); font-style:normal;
+}
+
+/* ─────────────────────────────────────
+   SPECS BAND
+───────────────────────────────────── */
+.specs-band {
+  background:var(--B2);
+  border-top:1px solid var(--Tm);
+  border-bottom:1px solid var(--Tm);
+}
+.specs-row {
+  max-width:1200px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(4,1fr);
+}
+.spec {
+  padding:58px 24px; text-align:center;
+  border-right:1px solid var(--Tm);
+}
+.spec:last-child { border-right:none; }
+.spec-n {
+  font-family:'Cormorant Garamond',serif;
+  font-size:72px; font-weight:300;
+  color:var(--T); line-height:1; display:block;
+}
+.spec-u { font-family:'Cormorant Garamond',serif; font-size:32px; color:var(--W35); }
+.spec-l {
+  font-size:11px; font-weight:500;
+  letter-spacing:.24em; text-transform:uppercase;
+  color:var(--W65); margin-top:12px; display:block;
+}
+
+/* ─────────────────────────────────────
+   LIFESTYLE FEATURE GRID
+───────────────────────────────────── */
+.life-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+  background:var(--Tm);
+  border:1px solid var(--Tm);
+  margin-top:58px;
+}
+.lf {
+  background:var(--B); padding:48px 40px;
+  position:relative; overflow:hidden;
+  transition:background .3s;
+}
+.lf::after {
+  content:''; position:absolute; bottom:0; left:0; right:0;
+  height:2px; background:var(--T);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform .4s ease;
+}
+.lf:hover { background:var(--Tl); }
+.lf:hover::after { transform:scaleX(1); }
+.lf-ico {
+  width:36px; height:36px; margin-bottom:22px;
+}
+.lf-ico svg { width:100%; height:100%; }
+.lf-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px; font-weight:400;
+  color:var(--W); margin-bottom:14px;
+}
+.lf-desc {
+  font-size:15px; font-weight:300;
+  color:var(--W65); line-height:1.82;
+}
+
+/* ─────────────────────────────────────
+   ARCHITECTURE SECTION (dark band)
+───────────────────────────────────── */
+.arch-band {
+  background:var(--B2);
+  border-top:1px solid var(--Tm);
+  border-bottom:1px solid var(--Tm);
+}
+.arch-inner { max-width:1200px; margin:0 auto; padding:110px 60px; }
+
+/* ─────────────────────────────────────
+   AVILA COMMUNITY
+───────────────────────────────────── */
+.avila-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:2px; background:var(--Tm);
+  margin-top:58px;
+}
+.av {
+  background:var(--B); padding:40px 36px;
+  display:flex; gap:24px; align-items:flex-start;
+  transition:background .3s;
+}
+.av:hover { background:var(--Tl); }
+.av-ico {
+  width:52px; height:52px; flex-shrink:0;
+  border:1px solid var(--Tm);
+  background:var(--Tl);
+  display:flex; align-items:center; justify-content:center;
+}
+.av-ico svg { width:24px; height:24px; }
+.av-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px; font-weight:400;
+  color:var(--W); margin-bottom:10px;
+}
+.av-desc { font-size:15px; font-weight:300; color:var(--W65); line-height:1.82; }
+
+/* ─────────────────────────────────────
+   IPA / AWARDS BAND
+───────────────────────────────────── */
+.award-band {
+  background:var(--B2);
+  border-top:1px solid var(--Tm);
+  border-bottom:1px solid var(--Tm);
+  padding:82px 60px; text-align:center;
+}
+.award-inner { max-width:860px; margin:0 auto; }
+.award-ico { width:60px; height:60px; margin:0 auto 26px; }
+.award-ico svg { width:100%; height:100%; }
+.award-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(28px,4vw,48px); font-weight:300;
+  color:var(--W); line-height:1.14; margin-bottom:22px;
+}
+.award-title em { font-style:italic; color:var(--T); }
+.award-body {
+  font-size:17px; font-weight:300;
+  color:var(--W65); line-height:1.9; margin-bottom:32px;
+}
+.award-pill {
+  display:inline-block; padding:16px 38px;
+  border:1px solid var(--Tm); background:var(--Tl);
+  font-size:11px; font-weight:600;
+  letter-spacing:.28em; text-transform:uppercase;
+  color:var(--T);
+}
+
+/* ─────────────────────────────────────
+   PRICING
+───────────────────────────────────── */
+.pricing-bg { background:var(--B2); border-top:1px solid var(--Tm); }
+.price-cards {
+  display:grid; grid-template-columns:1fr 1.15fr 1fr;
+  gap:24px; margin-top:58px;
+}
+.pc {
+  padding:50px 40px;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(0,0,0,.5);
+  transition:border-color .3s, transform .3s;
+}
+.pc:hover { border-color:var(--Tm); transform:translateY(-5px); }
+.pc.ft {
+  border-color:var(--T); background:var(--Tl);
+  position:relative; overflow:hidden;
+}
+.pc.ft::before {
+  content:'LISTED PRICE';
+  position:absolute; top:18px; right:-26px;
+  background:var(--T); color:var(--B);
+  font-size:9px; font-weight:700; letter-spacing:.22em;
+  padding:6px 48px; transform:rotate(35deg);
+}
+.pc-lbl {
+  font-size:11px; font-weight:600;
+  letter-spacing:.26em; text-transform:uppercase;
+  color:var(--W65); margin-bottom:16px;
+}
+.pc-val {
+  font-family:'Cormorant Garamond',serif;
+  font-size:46px; font-weight:300;
+  color:var(--W); line-height:1; margin-bottom:8px;
+}
+.pc.ft .pc-val { color:var(--T); }
+.pc-desc {
+  font-size:15px; font-weight:300;
+  color:var(--W65); line-height:1.85; margin-top:18px;
+}
+.price-note {
+  margin-top:40px; padding:30px 40px;
+  border-left:3px solid var(--Tm);
+  background:var(--Tl);
+  font-size:14px; font-weight:300;
+  color:var(--W65); line-height:1.88;
+}
+.price-note strong { color:var(--W); font-weight:500; }
+
+/* ─────────────────────────────────────
+   CONTACT / CTA
+───────────────────────────────────── */
+.agent-card {
+  background:var(--Tl);
+  border:1px solid var(--Tm);
+  padding:54px;
+}
+.agent-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:36px; font-weight:400; color:var(--W); margin-bottom:6px;
+}
+.agent-creds {
+  font-size:11px; font-weight:600;
+  letter-spacing:.24em; text-transform:uppercase;
+  color:var(--T); padding-bottom:24px;
+  border-bottom:1px solid var(--Tm); margin-bottom:26px;
+}
+.cr { display:flex; gap:16px; margin-bottom:16px; align-items:baseline; }
+.cr-lbl {
+  font-size:10px; font-weight:700;
+  letter-spacing:.26em; text-transform:uppercase;
+  color:var(--T); min-width:68px; flex-shrink:0;
+}
+.cr-val { font-size:16px; font-weight:300; color:var(--W85); }
+.cr-val a { color:var(--W85); text-decoration:none; transition:color .2s; }
+.cr-val a:hover { color:var(--T); }
+.partner-row {
+  margin-top:30px; padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.06);
+  display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+}
+.p-lbl  { font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--W65); }
+.p-name { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:300; color:var(--W85); }
+.p-sep  { color:var(--Tm); font-size:20px; }
+
+.contact-intro h2 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(36px,5vw,60px); font-weight:300;
+  line-height:1.08; color:var(--W); margin-bottom:28px;
+}
+.contact-intro h2 em { font-style:italic; color:var(--T); }
+.contact-intro p {
+  font-size:18px; font-weight:300;
+  color:var(--W65); line-height:1.88; margin-bottom:24px;
+}
+.cta-btn {
+  display:inline-block; margin-top:32px;
+  padding:22px 58px;
+  background:var(--T); color:var(--B);
+  font-size:12px; font-weight:700;
+  letter-spacing:.30em; text-transform:uppercase;
+  text-decoration:none;
+  transition:background .3s, transform .25s, box-shadow .3s;
+}
+.cta-btn:hover {
+  background:#09a8a3; transform:translateY(-3px);
+  box-shadow:0 14px 44px rgba(10,186,181,.30);
+}
+
+/* ─────────────────────────────────────
+   FOOTER
+───────────────────────────────────── */
+footer {
+  background:#020202;
+  border-top:1px solid var(--Tm);
+  padding:66px 60px 46px;
+}
+.footer-grid {
+  max-width:1200px; margin:0 auto;
+  display:grid; grid-template-columns:1.8fr 1fr 1fr;
+  gap:56px; margin-bottom:44px;
+}
+.footer-brand {
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px; font-weight:300; color:var(--W85); margin-bottom:10px;
+}
+.footer-tag {
+  font-size:10px; font-weight:500;
+  letter-spacing:.20em; text-transform:uppercase;
+  color:var(--T); margin-bottom:18px;
+}
+.footer-detail { font-size:15px; font-weight:300; color:var(--W65); line-height:2.0; }
+.footer-col-title {
+  font-size:10px; font-weight:700;
+  letter-spacing:.26em; text-transform:uppercase;
+  color:var(--T); margin-bottom:18px;
+}
+.footer-bottom {
+  max-width:1200px; margin:0 auto;
+  padding-top:28px;
+  border-top:1px solid rgba(255,255,255,.05);
+  display:flex; justify-content:space-between;
+  font-size:12px; font-weight:300; color:var(--W35);
+  flex-wrap:wrap; gap:12px;
+}
+
+/* ─────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────── */
+@media(max-width:960px){
+  nav { padding:16px 24px; }
+  nav.pinned { padding:14px 24px; }
+  .nav-links { display:none; }
+  .col2,.col2-wide { grid-template-columns:1fr; gap:48px; }
+  .life-grid,.avila-grid { grid-template-columns:1fr; }
+  .specs-row { grid-template-columns:1fr 1fr; }
+  .price-cards { grid-template-columns:1fr; }
+  .wrap,.wrap-sm { padding:70px 24px; }
+  .footer-grid { grid-template-columns:1fr; gap:36px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HIDDEN SVG DEFS -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="si" viewBox="0 0 24 24">
+      <path fill="#0ABAB5" d="M12 1.5C12 1.5 13.4 7.9 14.85 9.85C16.8 11.2 22.5 12 22.5 12C22.5 12 16.8 12.8 14.85 14.15C13.4 16.1 12 22.5 12 22.5C12 22.5 10.6 16.1 9.15 14.15C7.2 12.8 1.5 12 1.5 12C1.5 12 7.2 11.2 9.15 9.85C10.6 7.9 12 1.5 12 1.5Z"/>
+      <circle fill="#0ABAB5" cx="12" cy="12" r="2.8"/>
+    </symbol>
+    <symbol id="si-lg" viewBox="0 0 32 32">
+      <path fill="#0ABAB5" d="M16 2C16 2 17.8 10.5 19.8 13.1C22.4 14.9 30 16 30 16C30 16 22.4 17.1 19.8 18.9C17.8 21.5 16 30 16 30C16 30 14.2 21.5 12.2 18.9C9.6 17.1 2 16 2 16C2 16 9.6 14.9 12.2 13.1C14.2 10.5 16 2 16 2Z"/>
+      <circle fill="#0ABAB5" cx="16" cy="16" r="3.8"/>
+    </symbol>
+    <symbol id="si-blk" viewBox="0 0 24 24">
+      <path fill="rgba(0,0,0,0.50)" d="M12 1.5C12 1.5 13.4 7.9 14.85 9.85C16.8 11.2 22.5 12 22.5 12C22.5 12 16.8 12.8 14.85 14.15C13.4 16.1 12 22.5 12 22.5C12 22.5 10.6 16.1 9.15 14.15C7.2 12.8 1.5 12 1.5 12C1.5 12 7.2 11.2 9.15 9.85C10.6 7.9 12 1.5 12 1.5Z"/>
+      <circle fill="rgba(0,0,0,0.50)" cx="12" cy="12" r="2.8"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-name">StrongHer Consulting</span>
+    <span class="nav-brand-sub">In Partnership with Realty of America</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#estate">The Residence</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#lifestyle">Lifestyle</a></li>
+    <li><a href="#avila">Avila</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Inquire</a></li>
+  </ul>
+</nav>
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Avila Golf &amp; Country Club &nbsp;·&nbsp; Tampa, Florida 33613</p>
+    <h1 class="hero-title">901 Palacio<br><em>De Avila</em></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">
+      A Private Legacy Estate of Exceptional Scale &amp; Artistry<br>
+      Guard-Gated &nbsp;·&nbsp; Waterfront &nbsp;·&nbsp; Offered by Private Auction
+    </p>
+    <div class="hero-stats">
+      <div class="hs"><span class="hs-val">18,681</span><span class="hs-lbl">Sq Ft Living</span></div>
+      <div class="hs"><span class="hs-val">3.44</span><span class="hs-lbl">Gated Acres</span></div>
+      <div class="hs"><span class="hs-val">9 / 12</span><span class="hs-lbl">Beds / Baths</span></div>
+      <div class="hs"><span class="hs-val">8-Car</span><span class="hs-lbl">Garage</span></div>
+      <div class="hs"><span class="hs-val">5</span><span class="hs-lbl">Fireplaces</span></div>
+    </div>
+    <p class="hero-price">Private Auction · Starting at <span>$17,500,000</span></p>
+    <p class="hero-note">Expert Completed Value Opinion: <strong>$23,000,000</strong></p>
+  </div>
+</div>
+
+<!-- ══ ADDRESS BAR ══ -->
+<div class="addr-bar">
+  <div class="addr-item"><svg width="13" height="13"><use href="#si"/></svg>901 Palacio De Avila</div>
+  <div class="addr-item"><svg width="13" height="13"><use href="#si"/></svg>Tampa, FL 33613</div>
+  <div class="addr-item"><svg width="13" height="13"><use href="#si"/></svg>Avila Golf &amp; Country Club</div>
+  <div class="addr-item"><svg width="13" height="13"><use href="#si"/></svg>Manned Guard-Gate · 3.44 Acres</div>
+  <div class="addr-item"><svg width="13" height="13"><use href="#si"/></svg>Off-Market · By Appointment Only</div>
+</div>
+
+<!-- ══ OPENING STATEMENT ══ -->
+<div class="statement-band fd">
+  <div class="statement-inner">
+    <p class="statement-pre">A Residence Defined by Its Rarity</p>
+    <h2 class="statement-title">Imagine the life that begins<br>the moment you cross these gates.</h2>
+    <p class="statement-body">There are homes. And then there are places that quietly become the center of a family's story — where mornings feel unhurried, where guests arrive and never want to leave, where children grow up understanding what it means to belong to something extraordinary. 901 Palacio De Avila is that place. It does not ask to be considered. It simply commands.</p>
+  </div>
+</div>
+
+<!-- ══ ESTATE NARRATIVE ══ -->
+<div id="estate" class="wrap">
+  <div class="col2-wide fd">
+    <div class="body">
+      <div class="eyebrow">The Residence</div>
+      <h2 class="h2">Where Privacy<br>Becomes a <em>Lifestyle</em></h2>
+      <p class="lead">Some properties offer square footage. This one offers separation — a complete world unto itself, set apart from everything ordinary.</p>
+      <p>The moment your vehicle passes through the private iron gates, flanked on both sides by tranquil reflecting water, something shifts. The noise of the outside world disappears. What remains is the soft rustle of mature palms along the winding drive, the sense of scale that only reveals itself slowly, and the knowledge that you have arrived somewhere that very few ever will.</p>
+      <p>Set within Avila Golf &amp; Country Club — Tampa Bay's most established guard-gated private estate community — this residence spans more than 18,000 square feet of living space across 3.44 private, waterfront acres. It is not simply large. It is proportioned for the way families at the highest level of achievement actually live: with space enough for solitude, for gathering, for entertaining on a grand scale, and for the unhurried rhythms of private life.</p>
+      <p class="italic-close">"This is the property your family will always call home — long after the next chapter, and the chapter after that."</p>
+    </div>
+    <div>
+      <div class="pq">
+        <p>"The world's most exceptional residences are never judged solely by their dimensions. They are measured by the feeling they create — the knowledge, standing inside, that nothing like this exists anywhere nearby."</p>
+        <cite>— Estate Narrative · 901 Palacio De Avila</cite>
+      </div>
+      <div class="pq">
+        <p>"When a property of this scale and provenance becomes available in a market ascending as rapidly as Tampa Bay, the window is not wide. It is, in truth, a single moment."</p>
+        <cite>— Wendy Cowan, CIPS · SRS · Global Real Estate Practitioner</cite>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="rule"></div>
+
+<!-- ══ SPECS ══ -->
+<div class="specs-band">
+  <div class="specs-row fd">
+    <div class="spec"><span class="spec-n">18<span class="spec-u">,681</span></span><span class="spec-l">Square Feet of Living</span></div>
+    <div class="spec"><span class="spec-n">3.44</span><span class="spec-l">Private Gated Acres</span></div>
+    <div class="spec"><span class="spec-n">9<span class="spec-u"> / 12</span></span><span class="spec-l">Bedrooms / Baths</span></div>
+    <div class="spec"><span class="spec-n">8</span><span class="spec-l">Car Collector Garage</span></div>
+  </div>
+</div>
+
+<!-- ══ ARCHITECTURE ══ -->
+<div id="architecture" class="arch-band">
+  <div class="arch-inner">
+    <div class="col2 fd">
+      <div>
+        <div class="eyebrow">Architectural Excellence</div>
+        <h2 class="h2">Built for<br><em>Permanence</em></h2>
+        <div class="body">
+          <p>There is a particular kind of architecture that does not simply house a family — it elevates them. 901 Palacio De Avila was conceived for this purpose. Every proportion, every material, every sightline was considered with the understanding that the people within would live richly, entertain graciously, and retreat completely.</p>
+          <p>Soaring ceilings rise above rooms of monumental scale. Grand columns and sweeping architectural millwork create the sense of a private palazzo — a home that references the great estates of European tradition while remaining entirely suited to modern family life. Two majestic staircases anchor the primary living volumes. A private elevator ensures effortless movement across all levels.</p>
+          <p>The materials are irreplaceable. Chandeliers commissioned from master artisans in Italy and Spain cast warm light across bespoke marble and exotic granite installations. Agate stone stairs — a detail impossible to replicate — deliver artistry underfoot at every step. Every finish, every surface, every fixture was selected not to impress momentarily, but to endure across generations.</p>
+        </div>
+      </div>
+      <div class="body">
+        <div class="eyebrow" style="margin-top:8px;">Interior Distinction</div>
+        <h2 class="h2">Crafted<br>by <em>Hand</em></h2>
+        <p>The interior environments were designed to serve every dimension of private life simultaneously. Formal entertaining salons flow seamlessly into casual family spaces. Two full professional kitchens ensure that a private dinner for four and a philanthropic gala for two hundred are equally effortless to host. Five fireplaces anchor intimate gathering moments throughout the home.</p>
+        <p>The owner's retreat is, in every sense, a private sanctuary. A two-story couture wardrobe gallery — with dedicated salons for every category of personal collection — frames a dressing environment that rivals the finest suites of the world's premier hotels. The spa-level bathing suite features a steam shower, Toto wash-let, and a deep Jacuzzi soaking experience designed for complete restoration.</p>
+        <p>Crestron smart-home integration unifies every system — climate, lighting, security, audio, visual — beneath a single, elegant interface. The home responds to those who live within it. Technology serves comfort here, never the other way around.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ LIFESTYLE ══ -->
+<div id="lifestyle" class="wrap">
+  <div class="eyebrow fd">The Life Within</div>
+  <h2 class="h2 fd">Every Day,<br><em>Extraordinary</em></h2>
+  <p class="fd" style="font-size:18px; font-weight:300; color:var(--W65); line-height:1.88; max-width:780px; margin-bottom:0;">The measure of a truly great residence is not what it looks like on first visit — it is how it feels on an ordinary Tuesday. What this estate offers is not showmanship. It is the quiet luxury of living at the very highest level, every single day.</p>
+
+  <div class="life-grid fd">
+
+    <div class="lf">
+      <div class="lf-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+      <h3 class="lf-title">The Art of Arrival</h3>
+      <p class="lf-desc">Dual reflecting water features flank your private iron gates. A palm-lined motor court unfolds toward a grand porte-cochère. Every homecoming is a ceremony — a daily reminder that what waits inside is unlike anything else.</p>
+    </div>
+
+    <div class="lf">
+      <div class="lf-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+      <h3 class="lf-title">A Retreat Within a Retreat</h3>
+      <p class="lf-desc">The owner's suite is your private world within the private world of the estate — fireplace, couture two-story wardrobe gallery, spa bathing suite, dedicated shoe and handbag salons, and a 100-inch integrated media wall.</p>
+    </div>
+
+    <div class="lf">
+      <div class="lf-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+      <h3 class="lf-title">Gathering at Grandeur</h3>
+      <p class="lf-desc">Two professional kitchens, expansive formal and informal salons, a private theater, wine cellar with tasting room, cigar and cognac lounge — everything required to host the world, on your terms, without leaving your gates.</p>
+    </div>
+
+    <div class="lf">
+      <div class="lf-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+      <h3 class="lf-title">A Resort You Never Leave</h3>
+      <p class="lf-desc">Indoor pool, outdoor pool space, pickle ball court, mature oak canopies, tranquil waterfront views, and multiple private terraces across 3.44 acres. Resort living — without the resort. Every amenity, absolute privacy.</p>
+    </div>
+
+    <div class="lf">
+      <div class="lf-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+      <h3 class="lf-title">The Collector's Domain</h3>
+      <p class="lf-desc">An eight-car collector's garage worthy of the most serious automotive collection — a private sanctuary for extraordinary machines, positioned with complete discretion adjacent to private staff accommodations.</p>
+    </div>
+
+    <div class="lf">
+      <div class="lf-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+      <h3 class="lf-title">Seamless, Invisible Technology</h3>
+      <p class="lf-desc">Full Crestron integration throughout — security, climate, lighting, entertainment, and automation unified in a single intelligent system. The home anticipates. It responds. It protects. It simply works.</p>
+    </div>
+
+    <div class="lf">
+      <div class="lf-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+      <h3 class="lf-title">Spaces for Every Season</h3>
+      <p class="lf-desc">Nine en-suite bedrooms and five fireplaces mean every member of the family — and every guest — inhabits their own chapter of this residence. No one shares. No one waits. Everyone belongs.</p>
+    </div>
+
+    <div class="lf">
+      <div class="lf-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+      <h3 class="lf-title">The Gift of Completion</h3>
+      <p class="lf-desc">At approximately 95% complete, the renovation's heavy lifting is finished. International FF&amp;E, artisan lighting, bespoke furnishings — already on-site. The next owner simply places the final signature on a future masterpiece.</p>
+    </div>
+
+    <div class="lf">
+      <div class="lf-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+      <h3 class="lf-title">Privacy, by Design</h3>
+      <p class="lf-desc">Manned guard-gate. Waterfront buffer. Mature oak canopy. Iron perimeter. 3.44 acres of natural separation. This residence was not designed to be found. It was designed to be yours — completely and without compromise.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="rule"></div>
+
+<!-- ══ AVILA ══ -->
+<div id="avila" class="wrap">
+  <div class="eyebrow fd">The Community</div>
+  <h2 class="h2 fd">Avila Golf &amp;<br><em>Country Club</em></h2>
+  <div class="col2-wide fd">
+    <div class="body">
+      <p class="lead">To live at Avila is to belong to something that cannot be built again — a community assembled over decades, defined by championship golf, extraordinary privacy, and a standard of living that simply has no peer in the Tampa Bay region.</p>
+      <p>Avila is the address in Tampa Bay that requires no explanation. Those who know, know. The community spans hundreds of acres of mature oak-lined landscapes within a fully manned guard-gated perimeter. Residents include physicians, founders, executives, and prominent families who chose this community for the same reason you will: because there is nowhere else quite like it.</p>
+      <p>The clubhouse is not merely a club — it is an extension of home. Championship golf, premier tennis, refined dining, spa and wellness programming, and a concierge service culture that includes golf cart delivery of dinner directly to your estate. The understated pleasures of Avila life are available every single day.</p>
+      <p>And the city surrounding Avila is itself ascending. Tampa now ranks among America's most strategically significant business markets — with global connectivity, favorable tax policy, a flourishing financial and technology sector, and an international airport minutes from your gate.</p>
+    </div>
+    <div>
+      <div class="avila-grid">
+        <div class="av">
+          <div class="av-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+          <div><div class="av-title">Jack Nicklaus Signature Golf</div><div class="av-desc">Championship golf within the community. Select homes enjoy direct course frontage.</div></div>
+        </div>
+        <div class="av">
+          <div class="av-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+          <div><div class="av-title">24/7 Manned Security</div><div class="av-desc">Complete perimeter security across hundreds of mature oak-lined acres.</div></div>
+        </div>
+        <div class="av">
+          <div class="av-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+          <div><div class="av-title">Clubhouse Concierge Dining</div><div class="av-desc">Golf cart delivery of clubhouse dining directly to your estate door.</div></div>
+        </div>
+        <div class="av">
+          <div class="av-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+          <div><div class="av-title">Tennis &amp; Wellness</div><div class="av-desc">Championship tennis, spa programming, and refined wellness amenities.</div></div>
+        </div>
+        <div class="av">
+          <div class="av-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+          <div><div class="av-title">Tampa's Business Core</div><div class="av-desc">Minutes to Downtown Tampa, major financial centers, and international airport.</div></div>
+        </div>
+        <div class="av">
+          <div class="av-ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><use href="#si"/></svg></div>
+          <div><div class="av-title">A Market Ascending</div><div class="av-desc">Tampa ranks among America's top cities for corporate growth, capital migration, and quality of life.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ IPA AWARD ══ -->
+<div class="award-band fd">
+  <div class="award-inner">
+    <div class="award-ico"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><use href="#si-lg"/></svg></div>
+    <h2 class="award-title">International Property Awards<br><em>Submission Included Upon Deposit</em></h2>
+    <p class="award-body">Upon the buyer's deposit and mutual agreement, this estate will be submitted for consideration to the prestigious International Property Awards — the world's most widely recognized program for property excellence across residential, interior design, and renovation categories. The submission is entirely at the buyer's discretion. It is offered as an acknowledgment of what this residence already is: a work of international design significance, worthy of the world's finest stage.</p>
+    <div class="award-pill">Initiated Upon Deposit &nbsp;·&nbsp; Entirely at Buyer's Discretion &nbsp;·&nbsp; Outstanding Renovation Recognition</div>
+  </div>
+</div>
+
+<!-- ══ PRICING ══ -->
+<div id="pricing" class="pricing-bg">
+  <div class="wrap">
+    <div class="eyebrow fd">Pricing &amp; Opportunity</div>
+    <h2 class="h2 fd">The Moment<br><em>to Act</em></h2>
+    <div class="price-cards fd">
+      <div class="pc">
+        <div class="pc-lbl">Expert Completed Value Opinion</div>
+        <div class="pc-val">$23,000,000</div>
+        <p class="pc-desc">An independent expert valuation of the completed residence projects a market value of $23,000,000 upon renovation close-out — establishing the powerful financial rationale for acquiring at the auction starting price and participating in the completion upside.</p>
+      </div>
+      <div class="pc ft">
+        <div class="pc-lbl">Auction Starting Price</div>
+        <div class="pc-val">$17,500,000</div>
+        <p class="pc-desc">At <strong style="color:var(--W);">$5,500,000 below</strong> the expert completed value opinion, the auction opening price creates an immediate and measurable acquisition opportunity. The renovation is nearly done. The materials are on-site. The value is waiting to be unlocked by the right bidder at the right moment.</p>
+      </div>
+      <div class="pc">
+        <div class="pc-lbl">Active Tampa Comparable</div>
+        <div class="pc-val">$21,999,000</div>
+        <p class="pc-desc">52 Ladoga Ave, Tampa (18,568 sq ft / 0.92 acres) — active at $1,185/sq ft. The subject property offers equivalent living area with more than 3.7× the land, waterfront positioning, and manned guard-gate community membership. 914 S Golf View St closed April 2026 at $19,140,000 on 1.61 acres.</p>
+      </div>
+    </div>
+    <div class="price-note fd">
+      <strong>Data Note:</strong> Comparable sales referenced from RPR® AI Seller CMA dated May 10, 2026. All values are informational only and not a guarantee of value. A formal professional appraisal is pending. This offering is presented in compliance with all applicable federal and state Fair Housing laws. This property is offered without regard to race, color, religion, national origin, sex, disability, familial status, or any other protected class. Equal Housing Opportunity. Copyright 2026 Realtors Property Resource® LLC. All Rights Reserved. Information is not guaranteed.
+    </div>
+  </div>
+</div>
+
+<!-- ══ CONTACT ══ -->
+<div id="contact" class="wrap">
+  <div class="col2 fd">
+    <div class="contact-intro">
+      <h2>Reserve Your<br>Private <em>Appointment</em></h2>
+      <p>This estate is offered exclusively through StrongHer Consulting in partnership with Realty of America. Private viewings are arranged by appointment only. All buyer representatives are warmly welcomed.</p>
+      <p>The window for a property of this caliber, in this community, at this price relative to its completed value, is precisely that — a window. Complete the inquiry form and Wendy Cowan will arrange your private introduction to 901 Palacio De Avila.</p>
+      <a href="https://forms.gle/YWG8DQpV7uoFKsyw7" target="_blank" class="cta-btn">Complete Inquiry Form</a>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">Wendy Cowan</div>
+      <div class="agent-creds">CIPS &nbsp;·&nbsp; SRS &nbsp;·&nbsp; Global Real Estate Practitioner &nbsp;·&nbsp; FL Lic. #SL3209996</div>
+      <div class="cr"><span class="cr-lbl">Phone</span><span class="cr-val"><a href="tel:4072766254">(407) 276-6254</a></span></div>
+      <div class="cr"><span class="cr-lbl">Email</span><span class="cr-val"><a href="mailto:wendycowansells@gmail.com">wendycowansells@gmail.com</a></span></div>
+      <div class="cr"><span class="cr-lbl">Web</span><span class="cr-val"><a href="https://www.strongherconsulting.com" target="_blank">strongherconsulting.com</a></span></div>
+      <div class="cr"><span class="cr-lbl">Broker</span><span class="cr-val">Realty of America · Orlando, FL</span></div>
+      <div class="cr"><span class="cr-lbl">Inquire</span><span class="cr-val"><a href="https://forms.gle/YWG8DQpV7uoFKsyw7" target="_blank" style="color:var(--T);font-weight:600;">forms.gle/YWG8DQpV7uoFKsyw7</a></span></div>
+      <div class="partner-row">
+        <span class="p-lbl">Presented by</span>
+        <span class="p-name">StrongHer Consulting</span>
+        <span class="p-sep">+</span>
+        <span class="p-name">Realty of America</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">StrongHer Consulting</div>
+      <div class="footer-tag">Empowering Innovation · Advancing Sustainability · Unlocking Capital</div>
+      <p class="footer-detail">www.strongherconsulting.com<br>wendycowansells@gmail.com<br>(407) 276-6254</p>
+    </div>
+    <div>
+      <div class="footer-col-title">The Property</div>
+      <p class="footer-detail">901 Palacio De Avila<br>Tampa, FL 33613<br>Auction from $17,500,000<br>Private Appointment Only</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Brokerage</div>
+      <p class="footer-detail">Realty of America<br>Orlando, FL<br>FL Lic. #SL3209996<br>Equal Housing Opportunity</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 StrongHer Consulting · Realty of America · All Rights Reserved</span>
+    <span>Equal Housing Opportunity · Information is not guaranteed · RPR® data used with permission</span>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('pinned', window.scrollY > 60); });
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); } }),
+    { threshold: 0.09 }
+  );
+  document.querySelectorAll('.fd').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
